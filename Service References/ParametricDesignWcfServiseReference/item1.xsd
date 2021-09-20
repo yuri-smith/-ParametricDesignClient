@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfCompany">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Company" nillable="true" type="tns:Company" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCompany" nillable="true" type="tns:ArrayOfCompany" />
+  <xs:complexType name="Company">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActualAddress" nillable="true" type="tns:Address" />
+      <xs:element minOccurs="0" name="ActualCity" nillable="true" type="tns:City" />
+      <xs:element minOccurs="0" name="ActualCityCityID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CompanyID" type="xs:int" />
+      <xs:element minOccurs="0" name="Currency" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Customers" nillable="true" type="tns:ArrayOfSellerCustomerCompany" />
+      <xs:element minOccurs="0" name="DatePrice" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="INN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KPP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LegalAddress" nillable="true" type="tns:Address" />
+      <xs:element minOccurs="0" name="LegalCity" nillable="true" type="tns:City" />
+      <xs:element minOccurs="0" name="LegalCityCityID" type="xs:int" />
+      <xs:element minOccurs="0" name="LongName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sellers" nillable="true" type="tns:ArrayOfSellerCustomerCompany" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Company" nillable="true" type="tns:Company" />
+  <xs:complexType name="Address">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="House" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Office" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Street" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Address" nillable="true" type="tns:Address" />
+  <xs:complexType name="City">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CityID" type="xs:int" />
+      <xs:element minOccurs="0" name="Countries" nillable="true" type="tns:ArrayOfCountry" />
+      <xs:element minOccurs="0" name="FullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Regions" nillable="true" type="tns:ArrayOfRegion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="City" nillable="true" type="tns:City" />
+  <xs:complexType name="ArrayOfCountry">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Country" nillable="true" type="tns:Country" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCountry" nillable="true" type="tns:ArrayOfCountry" />
+  <xs:complexType name="Country">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cities" nillable="true" type="tns:ArrayOfCity" />
+      <xs:element minOccurs="0" name="CountryID" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Regions" nillable="true" type="tns:ArrayOfRegion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Country" nillable="true" type="tns:Country" />
+  <xs:complexType name="ArrayOfCity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="City" nillable="true" type="tns:City" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCity" nillable="true" type="tns:ArrayOfCity" />
+  <xs:complexType name="ArrayOfRegion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Region" nillable="true" type="tns:Region" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRegion" nillable="true" type="tns:ArrayOfRegion" />
+  <xs:complexType name="Region">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cities" nillable="true" type="tns:ArrayOfCity" />
+      <xs:element minOccurs="0" name="Countries" nillable="true" type="tns:ArrayOfCountry" />
+      <xs:element minOccurs="0" name="FullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RegionID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Region" nillable="true" type="tns:Region" />
+  <xs:complexType name="ArrayOfSellerCustomerCompany">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SellerCustomerCompany" nillable="true" type="tns:SellerCustomerCompany" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSellerCustomerCompany" nillable="true" type="tns:ArrayOfSellerCustomerCompany" />
+  <xs:complexType name="SellerCustomerCompany">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Customer" nillable="true" type="tns:Company" />
+      <xs:element minOccurs="0" name="CustomerCompanyID" type="xs:int" />
+      <xs:element minOccurs="0" name="Discount" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Seller" nillable="true" type="tns:Company" />
+      <xs:element minOccurs="0" name="SellerCompanyID" type="xs:int" />
+      <xs:element minOccurs="0" name="SellerName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SellerCustomerCompany" nillable="true" type="tns:SellerCustomerCompany" />
+  <xs:complexType name="ArrayOfPerson">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Person" nillable="true" type="tns:Person" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPerson" nillable="true" type="tns:ArrayOfPerson" />
+  <xs:complexType name="Person">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PersonID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Person" nillable="true" type="tns:Person" />
+  <xs:complexType name="ArrayOfTypeProduct">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TypeProduct" nillable="true" type="tns:TypeProduct" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTypeProduct" nillable="true" type="tns:ArrayOfTypeProduct" />
+  <xs:complexType name="TypeProduct">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountAccountID" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParentTypeProductID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TypeProductID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TypeProduct" nillable="true" type="tns:TypeProduct" />
+  <xs:complexType name="ArrayOfTypeProductParameter">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TypeProductParameter" nillable="true" type="tns:TypeProductParameter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTypeProductParameter" nillable="true" type="tns:ArrayOfTypeProductParameter" />
+  <xs:complexType name="TypeProductParameter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DefaultValue" type="xs:int" />
+      <xs:element minOccurs="0" name="Parameter" nillable="true" type="tns:Parameter" />
+      <xs:element minOccurs="0" name="ParameterName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParameterParameterID" type="xs:int" />
+      <xs:element minOccurs="0" name="TypeProductTypeProductID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TypeProductParameter" nillable="true" type="tns:TypeProductParameter" />
+  <xs:complexType name="Parameter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParameterID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Parameter" nillable="true" type="tns:Parameter" />
+  <xs:complexType name="ArrayOfParameter">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Parameter" nillable="true" type="tns:Parameter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfParameter" nillable="true" type="tns:ArrayOfParameter" />
+  <xs:complexType name="ArrayOfCombination">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Combination" nillable="true" type="tns:Combination" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCombination" nillable="true" type="tns:ArrayOfCombination" />
+  <xs:complexType name="Combination">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CombinationID" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TypeProductTypeProductID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Combination" nillable="true" type="tns:Combination" />
+  <xs:complexType name="ArrayOfCombinationParameter">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CombinationParameter" nillable="true" type="tns:CombinationParameter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCombinationParameter" nillable="true" type="tns:ArrayOfCombinationParameter" />
+  <xs:complexType name="CombinationParameter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CombinationCombinationID" type="xs:int" />
+      <xs:element minOccurs="0" name="MaxValue" type="xs:int" />
+      <xs:element minOccurs="0" name="MinValue" type="xs:int" />
+      <xs:element minOccurs="0" name="ParameterParameterID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CombinationParameter" nillable="true" type="tns:CombinationParameter" />
+  <xs:complexType name="ArrayOfDim">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Dim" nillable="true" type="tns:Dim" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDim" nillable="true" type="tns:ArrayOfDim" />
+  <xs:complexType name="Dim">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DimID" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Dim" nillable="true" type="tns:Dim" />
+  <xs:complexType name="ArrayOfCombinationFitting">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CombinationFitting" nillable="true" type="tns:CombinationFitting" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCombinationFitting" nillable="true" type="tns:ArrayOfCombinationFitting" />
+  <xs:complexType name="CombinationFitting">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Combination" nillable="true" type="tns:Combination" />
+      <xs:element minOccurs="0" name="CombinationCombinationID" type="xs:int" />
+      <xs:element minOccurs="0" name="CombinationFittingID" type="xs:int" />
+      <xs:element minOccurs="0" name="Count" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DimCount" nillable="true" type="tns:Dim" />
+      <xs:element minOccurs="0" name="DimCountDimID" type="xs:int" />
+      <xs:element minOccurs="0" name="DimSize" nillable="true" type="tns:Dim" />
+      <xs:element minOccurs="0" name="DimSizeDimID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Fitting" nillable="true" type="tns:Fitting" />
+      <xs:element minOccurs="0" name="FittingArticle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FittingFittingID" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Size" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CombinationFitting" nillable="true" type="tns:CombinationFitting" />
+  <xs:complexType name="Fitting">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Article" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CombinationFittings" nillable="true" type="tns:ArrayOfCombinationFitting" />
+      <xs:element minOccurs="0" name="Company" nillable="true" type="tns:Company" />
+      <xs:element minOccurs="0" name="CompanyCompanyID" type="xs:int" />
+      <xs:element minOccurs="0" name="Details" nillable="true" type="tns:ArrayOfNodeDetailFitting" />
+      <xs:element minOccurs="0" name="DimCount" nillable="true" type="tns:Dim" />
+      <xs:element minOccurs="0" name="DimCountDimID" type="xs:int" />
+      <xs:element minOccurs="0" name="FittingID" type="xs:int" />
+      <xs:element minOccurs="0" name="FullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nodes" nillable="true" type="tns:ArrayOfNodeDetailFitting" />
+      <xs:element minOccurs="0" name="Price" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Fitting" nillable="true" type="tns:Fitting" />
+  <xs:complexType name="ArrayOfNodeDetailFitting">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NodeDetailFitting" nillable="true" type="tns:NodeDetailFitting" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNodeDetailFitting" nillable="true" type="tns:ArrayOfNodeDetailFitting" />
+  <xs:complexType name="NodeDetailFitting">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Count" type="xs:int" />
+      <xs:element minOccurs="0" name="DetailFittingID" type="xs:int" />
+      <xs:element minOccurs="0" name="NodeFittingID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NodeDetailFitting" nillable="true" type="tns:NodeDetailFitting" />
+  <xs:complexType name="ArrayOfFitting">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Fitting" nillable="true" type="tns:Fitting" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFitting" nillable="true" type="tns:ArrayOfFitting" />
+</xs:schema>

@@ -1,0 +1,944 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8733/Design_Time_Addresses/ParametricDesignWcfServiceLibrary/Service1/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" />
+  <xs:import schemaLocation="http://localhost:8733/Design_Time_Addresses/ParametricDesignWcfServiceLibrary/Service1/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:element name="GetCustomers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SellerID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="GetCustomersResult" nillable="true" type="q1:ArrayOfCompany" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCompanyNameResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompany">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="GetCompanyResult" nillable="true" type="q2:Company" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCompanies">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCompaniesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="GetAllCompaniesResult" nillable="true" type="q3:ArrayOfCompany" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPersonsOfCompany">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPersonsOfCompanyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="GetPersonsOfCompanyResult" nillable="true" type="q4:ArrayOfPerson" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPersonToCompany">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+        <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPersonToCompanyResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSession">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="WithRegistration" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSessionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="GetSessionResult" type="q5:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CloseSession">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="SessionGuid" type="q6:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CloseSessionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="Session" type="q7:guid" />
+        <xs:element minOccurs="0" name="ParentTypeID" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="NameNewTypeProduct" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddTypeResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RenameType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="Session" type="q8:guid" />
+        <xs:element minOccurs="0" name="TypeID" type="xs:int" />
+        <xs:element minOccurs="0" name="NewName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RenameTypeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="Session" type="q9:guid" />
+        <xs:element minOccurs="0" name="ParentTypeID" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="GetTypesResult" nillable="true" type="q10:ArrayOfTypeProduct" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DelType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="Session" type="q11:guid" />
+        <xs:element minOccurs="0" name="TypeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DelTypeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTypeParameters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="Session" type="q12:guid" />
+        <xs:element minOccurs="0" name="TypeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTypeParametersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="GetTypeParametersResult" nillable="true" type="q13:ArrayOfTypeProductParameter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TypeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="GetTypeResult" nillable="true" type="q14:TypeProduct" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetParameters">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetParametersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="GetParametersResult" nillable="true" type="q15:ArrayOfParameter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddParameter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="NewParameter" nillable="true" type="q16:Parameter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddParameterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddParameterResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RenameParameter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="CurParameter" nillable="true" type="q17:Parameter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RenameParameterResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddTypeParameter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TypeID" type="xs:int" />
+        <xs:element minOccurs="0" name="ParamID" type="xs:int" />
+        <xs:element minOccurs="0" name="NewDefaultValue" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddTypeParameterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="AddTypeParameterResult" nillable="true" type="q18:TypeProductParameter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCombinations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="Session" type="q19:guid" />
+        <xs:element minOccurs="0" name="TypeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCombinationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="GetCombinationsResult" nillable="true" type="q20:ArrayOfCombination" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCombination">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TypeID" type="xs:int" />
+        <xs:element minOccurs="0" name="NewName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCombinationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="AddCombinationResult" nillable="true" type="q21:Combination" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RenameCombination">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TypeID" type="xs:int" />
+        <xs:element minOccurs="0" name="CombinationID" type="xs:int" />
+        <xs:element minOccurs="0" name="NewName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RenameCombinationResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DelCombination">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="Session" type="q22:guid" />
+        <xs:element minOccurs="0" name="CombinationID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DelCombinationResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCombinationParameters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CombinationID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCombinationParametersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="GetCombinationParametersResult" nillable="true" type="q23:ArrayOfCombinationParameter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDims">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDimsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="GetDimsResult" nillable="true" type="q24:ArrayOfDim" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCombinationFittings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CombinationID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCombinationFittingsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="GetCombinationFittingsResult" nillable="true" type="q25:ArrayOfCombinationFitting" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCombinationFitting">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CombinationID" type="xs:int" />
+        <xs:element minOccurs="0" name="FittingID" type="xs:int" />
+        <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DimCountID" type="xs:int" />
+        <xs:element minOccurs="0" name="Count" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DimSizeID" type="xs:int" />
+        <xs:element minOccurs="0" name="Size" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCombinationFittingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="AddCombinationFittingResult" nillable="true" type="q26:CombinationFitting" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCombinationFitting_1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="CombinationFitting" nillable="true" type="q27:CombinationFitting" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCombinationFitting_1Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddCombinationFitting_1Result" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditCombinationFitting">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="CombinationFitting" nillable="true" type="q28:CombinationFitting" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditCombinationFittingResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DelCombinationFitting">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CombinationFittingID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DelCombinationFittingResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetArticle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FittingID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetArticleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetArticleResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddDim">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NewDimName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddDimResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="AddDimResult" nillable="true" type="q29:Dim" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RenameDim">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DimID" type="xs:int" />
+        <xs:element minOccurs="0" name="NewName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RenameDimResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DelDim">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DimID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DelDimResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCountries">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCountriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="GetCountriesResult" nillable="true" type="q30:ArrayOfCountry" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCountry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NewCountryName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCountryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="AddCountryResult" nillable="true" type="q31:Country" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RenameCountry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CountryID" type="xs:int" />
+        <xs:element minOccurs="0" name="NewName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RenameCountryResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DelCountry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CountryID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DelCountryResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRegions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CountryID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRegionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="GetRegionsResult" nillable="true" type="q32:ArrayOfRegion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCities">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CountryID" type="xs:int" />
+        <xs:element minOccurs="0" name="RegionID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCitiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="GetCitiesResult" nillable="true" type="q33:ArrayOfCity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddRegion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CountryID" type="xs:int" />
+        <xs:element minOccurs="0" name="NewRegionName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddRegionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="AddRegionResult" nillable="true" type="q34:Region" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RenameRegion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CountryID" type="xs:int" />
+        <xs:element minOccurs="0" name="RegionID" type="xs:int" />
+        <xs:element minOccurs="0" name="NewName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RenameRegionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DelRegion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RegionID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DelRegionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCitiesOfCountry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CountryID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCitiesOfCountryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="GetCitiesOfCountryResult" nillable="true" type="q35:ArrayOfCity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCitiesOfRegion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RegionID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCitiesOfRegionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="GetCitiesOfRegionResult" nillable="true" type="q36:ArrayOfCity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSmallSellers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="SessionID" type="q37:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSmallSellersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="GetSmallSellersResult" nillable="true" type="q38:ArrayOfCompany" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFullSellers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="SessionID" type="q39:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFullSellersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="GetFullSellersResult" nillable="true" type="q40:ArrayOfSellerCustomerCompany" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFittings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CompanyID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFittingsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="GetFittingsResult" nillable="true" type="q41:ArrayOfFitting" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllFittings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="SessionID" type="q42:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllFittingsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="GetAllFittingsResult" nillable="true" type="q43:ArrayOfFitting" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddFitting">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CompanyID" type="xs:int" />
+        <xs:element minOccurs="0" name="Article" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DimID" type="xs:int" />
+        <xs:element minOccurs="0" name="Price" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddFittingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="AddFittingResult" nillable="true" type="q44:Fitting" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCompany">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="INN" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="KPP" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LongName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LegalCityID" type="xs:int" />
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="LegalAddress" nillable="true" type="q45:Address" />
+        <xs:element minOccurs="0" name="ActualCityID" type="xs:int" />
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="ActualAddress" nillable="true" type="q46:Address" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCompanyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="AddCompanyResult" nillable="true" type="q47:Company" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCompanyID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="INN" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="KPP" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCompanyIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FindCompanyIDResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddSellerFromExistCompany">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="SessionID" type="q48:guid" />
+        <xs:element minOccurs="0" name="CompanyID" type="xs:int" />
+        <xs:element minOccurs="0" name="Discount" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddSellerFromExistCompanyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddSellerFromExistCompanyResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CountryID" type="xs:int" />
+        <xs:element minOccurs="0" name="RegionID" type="xs:int" />
+        <xs:element minOccurs="0" name="NameNewCity" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="AddCityResult" nillable="true" type="q49:City" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCitiesAsName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCitiesAsNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="GetCitiesAsNameResult" nillable="true" type="q50:ArrayOfCity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCityAsName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCityAsNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="AddCityAsNameResult" nillable="true" type="q51:City" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCityToRegion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="City" nillable="true" type="q52:City" />
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="Region" nillable="true" type="q53:Region" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCityToRegionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="AddCityToRegionResult" nillable="true" type="q54:City" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCityToCountry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CityID" type="xs:int" />
+        <xs:element minOccurs="0" name="CountryID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCityToCountryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="AddCityToCountryResult" nillable="true" type="q55:City" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNewCity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CountryID" type="xs:int" />
+        <xs:element minOccurs="0" name="RegionID" type="xs:int" />
+        <xs:element minOccurs="0" name="NameNewCity" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNewCityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="AddNewCityResult" nillable="true" type="q56:City" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNewRegion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CountryID" type="xs:int" />
+        <xs:element minOccurs="0" name="NameNewRegion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNewRegionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="AddNewRegionResult" nillable="true" type="q57:Region" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNewCountry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NameNewCountry" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNewCountryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="AddNewCountryResult" nillable="true" type="q58:Country" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNewCompany">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="NewCompany" nillable="true" type="q59:Company" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNewCompanyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="AddNewCompanyResult" nillable="true" type="q60:Company" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRateToRUB">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodeCurrency" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ShortDate" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRateToRUBResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetRateToRUBResult" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRateToEUR">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodeCurrency" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRateToEURResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetRateToEURResult" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FromCurrency" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ToCurrency" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetRateResult" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTypeProductParametersFromCombinationID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CombinationID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTypeProductParametersFromCombinationIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" minOccurs="0" name="GetTypeProductParametersFromCombinationIDResult" nillable="true" type="q61:ArrayOfTypeProductParameter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValueExpression">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TypeProductID" type="xs:int" />
+        <xs:element minOccurs="0" name="Expression" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValueExpressionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetValueExpressionResult" type="xs:float" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

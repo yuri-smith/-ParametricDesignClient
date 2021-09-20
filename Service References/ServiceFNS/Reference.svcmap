@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ffd17795-e567-4336-a898-03685d6d920e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://npchk.nalog.ru/FNSNDSCAWS_2?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="FNSNDSCAWS_2.wsdl" MetadataType="Wsdl" ID="1d93f20e-bcda-48ef-b2e0-2d1aca36054d" SourceId="1" SourceUrl="http://npchk.nalog.ru/FNSNDSCAWS_2?wsdl" />
+    <MetadataFile FileName="FNSNDSCAWS_2.xsd" MetadataType="Schema" ID="0af20078-8e1f-48eb-b124-b27e060e2982" SourceId="1" SourceUrl="http://npchk.nalog.ru/FNSNDSCAWS_2?xsd=1" />
+    <MetadataFile FileName="FNSNDSCAWS_21.xsd" MetadataType="Schema" ID="7c2de203-7631-480b-b73b-ab7d68845469" SourceId="1" SourceUrl="http://npchk.nalog.ru/FNSNDSCAWS_2?xsd=2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

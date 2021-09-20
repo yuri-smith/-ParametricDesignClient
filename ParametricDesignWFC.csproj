@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8F03CA07-D355-4583-9F4D-1A7588FE303F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ParametricDesignWFC</RootNamespace>
+    <AssemblyName>ParametricDesignWFC</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionForms\AddTypeParam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActionForms\AddTypeParam.Designer.cs">
+      <DependentUpon>AddTypeParam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActionForms\Combination.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActionForms\Combination.Designer.cs">
+      <DependentUpon>Combination.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActionForms\CombinationFitting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActionForms\CombinationFitting.Designer.cs">
+      <DependentUpon>CombinationFitting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActionForms\City.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActionForms\City.Designer.cs">
+      <DependentUpon>City.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActionForms\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActionForms\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActionForms\NewINN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActionForms\NewINN.Designer.cs">
+      <DependentUpon>NewINN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActionForms\Seller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActionForms\Seller.Designer.cs">
+      <DependentUpon>Seller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActionForms\Country.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActionForms\Country.Designer.cs">
+      <DependentUpon>Country.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActionForms\Dim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActionForms\Dim.Designer.cs">
+      <DependentUpon>Dim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActionForms\Fitting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActionForms\Fitting.Designer.cs">
+      <DependentUpon>Fitting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActionForms\Region.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActionForms\Region.Designer.cs">
+      <DependentUpon>Region.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Autorization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Autorization.Designer.cs">
+      <DependentUpon>Autorization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editor.Designer.cs">
+      <DependentUpon>Editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HandBooks\Cities.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HandBooks\Cities.Designer.cs">
+      <DependentUpon>Cities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HandBooks\Sellers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HandBooks\Sellers.Designer.cs">
+      <DependentUpon>Sellers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HandBooks\Countries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HandBooks\Countries.Designer.cs">
+      <DependentUpon>Countries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HandBooks\Dims.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HandBooks\Dims.Designer.cs">
+      <DependentUpon>Dims.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HandBooks\Fittings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HandBooks\Fittings.Designer.cs">
+      <DependentUpon>Fittings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HandBooks\Parameters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HandBooks\Parameters.Designer.cs">
+      <DependentUpon>Parameters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HandBooks\Regions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HandBooks\Regions.Designer.cs">
+      <DependentUpon>Regions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\ParametricDesignWcfServiseReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceFNS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ActionForms\AddTypeParam.resx">
+      <DependentUpon>AddTypeParam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActionForms\Combination.resx">
+      <DependentUpon>Combination.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActionForms\CombinationFitting.resx">
+      <DependentUpon>CombinationFitting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActionForms\City.resx">
+      <DependentUpon>City.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActionForms\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActionForms\NewINN.resx">
+      <DependentUpon>NewINN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActionForms\Seller.resx">
+      <DependentUpon>Seller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActionForms\Country.resx">
+      <DependentUpon>Country.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActionForms\Dim.resx">
+      <DependentUpon>Dim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActionForms\Fitting.resx">
+      <DependentUpon>Fitting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActionForms\Region.resx">
+      <DependentUpon>Region.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Autorization.resx">
+      <DependentUpon>Autorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editor.resx">
+      <DependentUpon>Editor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandBooks\Cities.resx">
+      <DependentUpon>Cities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandBooks\Sellers.resx">
+      <DependentUpon>Sellers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandBooks\Countries.resx">
+      <DependentUpon>Countries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandBooks\Dims.resx">
+      <DependentUpon>Dims.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandBooks\Fittings.resx">
+      <DependentUpon>Fittings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandBooks\Parameters.resx">
+      <DependentUpon>Parameters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandBooks\Regions.resx">
+      <DependentUpon>Regions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\ParametricDesignWcfServiseReference\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ParametricDesignWcfServiseReference\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ParametricDesignWcfServiseReference\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ParametricDesignWcfServiseReference\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ParametricDesignWcfServiseReference\ParametricDesignWFC.ParametricDesignWcfServiseReference.City.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ParametricDesignWcfServiseReference\ParametricDesignWFC.ParametricDesignWcfServiseReference.Combination.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ParametricDesignWcfServiseReference\ParametricDesignWFC.ParametricDesignWcfServiseReference.CombinationFitting.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ParametricDesignWcfServiseReference\ParametricDesignWFC.ParametricDesignWcfServiseReference.CombinationParameter.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ParametricDesignWcfServiseReference\ParametricDesignWFC.ParametricDesignWcfServiseReference.Company.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ParametricDesignWcfServiseReference\ParametricDesignWFC.ParametricDesignWcfServiseReference.Country.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ParametricDesignWcfServiseReference\ParametricDesignWFC.ParametricDesignWcfServiseReference.Dim.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ParametricDesignWcfServiseReference\ParametricDesignWFC.ParametricDesignWcfServiseReference.Fitting.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ParametricDesignWcfServiseReference\ParametricDesignWFC.ParametricDesignWcfServiseReference.Parameter.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ParametricDesignWcfServiseReference\ParametricDesignWFC.ParametricDesignWcfServiseReference.Person.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ParametricDesignWcfServiseReference\ParametricDesignWFC.ParametricDesignWcfServiseReference.Region.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ParametricDesignWcfServiseReference\ParametricDesignWFC.ParametricDesignWcfServiseReference.SellerCustomerCompany.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ParametricDesignWcfServiseReference\ParametricDesignWFC.ParametricDesignWcfServiseReference.TypeProduct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ParametricDesignWcfServiseReference\ParametricDesignWFC.ParametricDesignWcfServiseReference.TypeProductParameter.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ParametricDesignWcfServiseReference\Service1.wsdl" />
+    <None Include="Service References\ServiceFNS\FNSNDSCAWS_2.wsdl" />
+    <None Include="Service References\ServiceFNS\FNSNDSCAWS_2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceFNS\FNSNDSCAWS_21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceFNS\ParametricDesignWFC.ServiceFNS.NdsRequest2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceFNS\ParametricDesignWFC.ServiceFNS.NdsResponse2.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ParametricDesignWcfServiseReference\" />
+    <WCFMetadataStorage Include="Service References\ServiceFNS\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ParametricDesignWcfServiseReference\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ParametricDesignWcfServiseReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ParametricDesignWcfServiseReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ParametricDesignWcfServiseReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceFNS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceFNS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceFNS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

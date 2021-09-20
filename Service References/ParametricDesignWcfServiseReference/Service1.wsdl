@@ -1,0 +1,1394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/ParametricDesignWcfServiceLibrary/Service1/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/ParametricDesignWcfServiceLibrary/Service1/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/ParametricDesignWcfServiceLibrary/Service1/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary.Model" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/ParametricDesignWcfServiceLibrary/Service1/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_GetCustomers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomers" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCustomers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCompanyName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyName" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCompanyName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCompany_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompany" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCompany_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllCompanies_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCompanies" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllCompanies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCompaniesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPersonsOfCompany_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonsOfCompany" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPersonsOfCompany_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonsOfCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddPersonToCompany_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPersonToCompany" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddPersonToCompany_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPersonToCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSession_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSession" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSession_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSession_CustomExpMsgFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary" name="detail" element="q1:CustomExpMsg" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CloseSession_InputMessage">
+    <wsdl:part name="parameters" element="tns:CloseSession" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CloseSession_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CloseSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddType_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddType" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RenameType_InputMessage">
+    <wsdl:part name="parameters" element="tns:RenameType" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RenameType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RenameTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTypes" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DelType_InputMessage">
+    <wsdl:part name="parameters" element="tns:DelType" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DelType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DelTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DelType_CustomExpMsgFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary" name="detail" element="q2:CustomExpMsg" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTypeParameters_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTypeParameters" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTypeParameters_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTypeParametersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetType" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetParameters_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetParameters" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetParameters_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetParametersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddParameter_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddParameter" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddParameter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddParameterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddParameter_CustomExpMsgFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary" name="detail" element="q3:CustomExpMsg" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RenameParameter_InputMessage">
+    <wsdl:part name="parameters" element="tns:RenameParameter" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RenameParameter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RenameParameterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RenameParameter_CustomExpMsgFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary" name="detail" element="q4:CustomExpMsg" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddTypeParameter_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddTypeParameter" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddTypeParameter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddTypeParameterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCombinations_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCombinations" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCombinations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCombinationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddCombination_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCombination" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddCombination_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCombinationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddCombination_CustomExpMsgFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary" name="detail" element="q5:CustomExpMsg" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RenameCombination_InputMessage">
+    <wsdl:part name="parameters" element="tns:RenameCombination" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RenameCombination_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RenameCombinationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RenameCombination_CustomExpMsgFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary" name="detail" element="q6:CustomExpMsg" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DelCombination_InputMessage">
+    <wsdl:part name="parameters" element="tns:DelCombination" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DelCombination_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DelCombinationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCombinationParameters_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCombinationParameters" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCombinationParameters_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCombinationParametersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDims_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDims" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDims_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDimsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCombinationFittings_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCombinationFittings" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCombinationFittings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCombinationFittingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddCombinationFitting_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCombinationFitting" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddCombinationFitting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCombinationFittingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddCombinationFitting_1_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCombinationFitting_1" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddCombinationFitting_1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCombinationFitting_1Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EditCombinationFitting_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditCombinationFitting" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EditCombinationFitting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditCombinationFittingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DelCombinationFitting_InputMessage">
+    <wsdl:part name="parameters" element="tns:DelCombinationFitting" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DelCombinationFitting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DelCombinationFittingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetArticle_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetArticle" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetArticle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetArticleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddDim_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddDim" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddDim_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddDimResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddDim_CustomExpMsgFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary" name="detail" element="q7:CustomExpMsg" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RenameDim_InputMessage">
+    <wsdl:part name="parameters" element="tns:RenameDim" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RenameDim_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RenameDimResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RenameDim_CustomExpMsgFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary" name="detail" element="q8:CustomExpMsg" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DelDim_InputMessage">
+    <wsdl:part name="parameters" element="tns:DelDim" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DelDim_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DelDimResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DelDim_CustomExpMsgFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary" name="detail" element="q9:CustomExpMsg" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCountries_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountries" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCountries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddCountry_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCountry" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddCountry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCountryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddCountry_CustomExpMsgFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary" name="detail" element="q10:CustomExpMsg" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RenameCountry_InputMessage">
+    <wsdl:part name="parameters" element="tns:RenameCountry" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RenameCountry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RenameCountryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RenameCountry_CustomExpMsgFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary" name="detail" element="q11:CustomExpMsg" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DelCountry_InputMessage">
+    <wsdl:part name="parameters" element="tns:DelCountry" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DelCountry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DelCountryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DelCountry_CustomExpMsgFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary" name="detail" element="q12:CustomExpMsg" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRegions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegions" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRegions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCities_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCities" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddRegion_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddRegion" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddRegion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddRegionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddRegion_CustomExpMsgFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary" name="detail" element="q13:CustomExpMsg" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RenameRegion_InputMessage">
+    <wsdl:part name="parameters" element="tns:RenameRegion" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RenameRegion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RenameRegionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RenameRegion_CustomExpMsgFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary" name="detail" element="q14:CustomExpMsg" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DelRegion_InputMessage">
+    <wsdl:part name="parameters" element="tns:DelRegion" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DelRegion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DelRegionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DelRegion_CustomExpMsgFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary" name="detail" element="q15:CustomExpMsg" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCitiesOfCountry_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCitiesOfCountry" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCitiesOfCountry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCitiesOfCountryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCitiesOfRegion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCitiesOfRegion" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCitiesOfRegion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCitiesOfRegionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSmallSellers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSmallSellers" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSmallSellers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSmallSellersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetFullSellers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFullSellers" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetFullSellers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFullSellersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetFittings_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFittings" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetFittings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFittingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllFittings_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllFittings" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllFittings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllFittingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddFitting_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddFitting" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddFitting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddFittingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddFitting_CustomExpMsgFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary" name="detail" element="q16:CustomExpMsg" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddCompany_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCompany" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddCompany_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddCompany_CustomExpMsgFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/ParametricDesignWcfServiceLibrary" name="detail" element="q17:CustomExpMsg" />
+  </wsdl:message>
+  <wsdl:message name="IService1_FindCompanyID_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCompanyID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_FindCompanyID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCompanyIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddSellerFromExistCompany_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSellerFromExistCompany" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddSellerFromExistCompany_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSellerFromExistCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddCity_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCity" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddCity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCitiesAsName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCitiesAsName" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCitiesAsName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCitiesAsNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddCityAsName_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCityAsName" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddCityAsName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCityAsNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddCityToRegion_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCityToRegion" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddCityToRegion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCityToRegionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddCityToCountry_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCityToCountry" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddCityToCountry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCityToCountryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddNewCity_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewCity" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddNewCity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewCityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddNewRegion_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewRegion" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddNewRegion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewRegionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddNewCountry_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewCountry" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddNewCountry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewCountryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddNewCompany_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewCompany" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddNewCompany_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRateToRUB_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRateToRUB" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRateToRUB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRateToRUBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRateToEUR_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRateToEUR" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRateToEUR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRateToEURResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRate" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTypeProductParametersFromCombinationID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTypeProductParametersFromCombinationID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTypeProductParametersFromCombinationID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTypeProductParametersFromCombinationIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetValueExpression_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetValueExpression" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetValueExpression_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetValueExpressionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="GetCustomers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetCustomers" message="tns:IService1_GetCustomers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetCustomersResponse" message="tns:IService1_GetCustomers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetCompanyName" message="tns:IService1_GetCompanyName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetCompanyNameResponse" message="tns:IService1_GetCompanyName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompany">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetCompany" message="tns:IService1_GetCompany_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetCompanyResponse" message="tns:IService1_GetCompany_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCompanies">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllCompanies" message="tns:IService1_GetAllCompanies_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllCompaniesResponse" message="tns:IService1_GetAllCompanies_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonsOfCompany">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetPersonsOfCompany" message="tns:IService1_GetPersonsOfCompany_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetPersonsOfCompanyResponse" message="tns:IService1_GetPersonsOfCompany_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPersonToCompany">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddPersonToCompany" message="tns:IService1_AddPersonToCompany_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddPersonToCompanyResponse" message="tns:IService1_AddPersonToCompany_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSession">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetSession" message="tns:IService1_GetSession_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetSessionResponse" message="tns:IService1_GetSession_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/GetSessionCustomExpMsgFault" name="CustomExpMsgFault" message="tns:IService1_GetSession_CustomExpMsgFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CloseSession">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CloseSession" message="tns:IService1_CloseSession_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CloseSessionResponse" message="tns:IService1_CloseSession_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddType" message="tns:IService1_AddType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddTypeResponse" message="tns:IService1_AddType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RenameType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RenameType" message="tns:IService1_RenameType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RenameTypeResponse" message="tns:IService1_RenameType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetTypes" message="tns:IService1_GetTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetTypesResponse" message="tns:IService1_GetTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DelType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DelType" message="tns:IService1_DelType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DelTypeResponse" message="tns:IService1_DelType_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/DelTypeCustomExpMsgFault" name="CustomExpMsgFault" message="tns:IService1_DelType_CustomExpMsgFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTypeParameters">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetTypeParameters" message="tns:IService1_GetTypeParameters_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetTypeParametersResponse" message="tns:IService1_GetTypeParameters_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetType" message="tns:IService1_GetType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetTypeResponse" message="tns:IService1_GetType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetParameters">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetParameters" message="tns:IService1_GetParameters_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetParametersResponse" message="tns:IService1_GetParameters_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddParameter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddParameter" message="tns:IService1_AddParameter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddParameterResponse" message="tns:IService1_AddParameter_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/AddParameterCustomExpMsgFault" name="CustomExpMsgFault" message="tns:IService1_AddParameter_CustomExpMsgFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RenameParameter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RenameParameter" message="tns:IService1_RenameParameter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RenameParameterResponse" message="tns:IService1_RenameParameter_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/RenameParameterCustomExpMsgFault" name="CustomExpMsgFault" message="tns:IService1_RenameParameter_CustomExpMsgFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTypeParameter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddTypeParameter" message="tns:IService1_AddTypeParameter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddTypeParameterResponse" message="tns:IService1_AddTypeParameter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCombinations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetCombinations" message="tns:IService1_GetCombinations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetCombinationsResponse" message="tns:IService1_GetCombinations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCombination">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddCombination" message="tns:IService1_AddCombination_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddCombinationResponse" message="tns:IService1_AddCombination_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/AddCombinationCustomExpMsgFault" name="CustomExpMsgFault" message="tns:IService1_AddCombination_CustomExpMsgFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RenameCombination">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RenameCombination" message="tns:IService1_RenameCombination_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RenameCombinationResponse" message="tns:IService1_RenameCombination_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/RenameCombinationCustomExpMsgFault" name="CustomExpMsgFault" message="tns:IService1_RenameCombination_CustomExpMsgFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DelCombination">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DelCombination" message="tns:IService1_DelCombination_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DelCombinationResponse" message="tns:IService1_DelCombination_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCombinationParameters">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetCombinationParameters" message="tns:IService1_GetCombinationParameters_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetCombinationParametersResponse" message="tns:IService1_GetCombinationParameters_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDims">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDims" message="tns:IService1_GetDims_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDimsResponse" message="tns:IService1_GetDims_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCombinationFittings">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetCombinationFittings" message="tns:IService1_GetCombinationFittings_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetCombinationFittingsResponse" message="tns:IService1_GetCombinationFittings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCombinationFitting">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddCombinationFitting" message="tns:IService1_AddCombinationFitting_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddCombinationFittingResponse" message="tns:IService1_AddCombinationFitting_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCombinationFitting_1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddCombinationFitting_1" message="tns:IService1_AddCombinationFitting_1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddCombinationFitting_1Response" message="tns:IService1_AddCombinationFitting_1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditCombinationFitting">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EditCombinationFitting" message="tns:IService1_EditCombinationFitting_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EditCombinationFittingResponse" message="tns:IService1_EditCombinationFitting_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DelCombinationFitting">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DelCombinationFitting" message="tns:IService1_DelCombinationFitting_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DelCombinationFittingResponse" message="tns:IService1_DelCombinationFitting_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetArticle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetArticle" message="tns:IService1_GetArticle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetArticleResponse" message="tns:IService1_GetArticle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddDim">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddDim" message="tns:IService1_AddDim_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddDimResponse" message="tns:IService1_AddDim_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/AddDimCustomExpMsgFault" name="CustomExpMsgFault" message="tns:IService1_AddDim_CustomExpMsgFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RenameDim">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RenameDim" message="tns:IService1_RenameDim_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RenameDimResponse" message="tns:IService1_RenameDim_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/RenameDimCustomExpMsgFault" name="CustomExpMsgFault" message="tns:IService1_RenameDim_CustomExpMsgFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DelDim">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DelDim" message="tns:IService1_DelDim_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DelDimResponse" message="tns:IService1_DelDim_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/DelDimCustomExpMsgFault" name="CustomExpMsgFault" message="tns:IService1_DelDim_CustomExpMsgFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountries">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetCountries" message="tns:IService1_GetCountries_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetCountriesResponse" message="tns:IService1_GetCountries_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCountry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddCountry" message="tns:IService1_AddCountry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddCountryResponse" message="tns:IService1_AddCountry_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/AddCountryCustomExpMsgFault" name="CustomExpMsgFault" message="tns:IService1_AddCountry_CustomExpMsgFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RenameCountry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RenameCountry" message="tns:IService1_RenameCountry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RenameCountryResponse" message="tns:IService1_RenameCountry_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/RenameCountryCustomExpMsgFault" name="CustomExpMsgFault" message="tns:IService1_RenameCountry_CustomExpMsgFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DelCountry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DelCountry" message="tns:IService1_DelCountry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DelCountryResponse" message="tns:IService1_DelCountry_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/DelCountryCustomExpMsgFault" name="CustomExpMsgFault" message="tns:IService1_DelCountry_CustomExpMsgFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetRegions" message="tns:IService1_GetRegions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetRegionsResponse" message="tns:IService1_GetRegions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCities">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetCities" message="tns:IService1_GetCities_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetCitiesResponse" message="tns:IService1_GetCities_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRegion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddRegion" message="tns:IService1_AddRegion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddRegionResponse" message="tns:IService1_AddRegion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/AddRegionCustomExpMsgFault" name="CustomExpMsgFault" message="tns:IService1_AddRegion_CustomExpMsgFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RenameRegion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RenameRegion" message="tns:IService1_RenameRegion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RenameRegionResponse" message="tns:IService1_RenameRegion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/RenameRegionCustomExpMsgFault" name="CustomExpMsgFault" message="tns:IService1_RenameRegion_CustomExpMsgFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DelRegion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DelRegion" message="tns:IService1_DelRegion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DelRegionResponse" message="tns:IService1_DelRegion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/DelRegionCustomExpMsgFault" name="CustomExpMsgFault" message="tns:IService1_DelRegion_CustomExpMsgFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCitiesOfCountry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetCitiesOfCountry" message="tns:IService1_GetCitiesOfCountry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetCitiesOfCountryResponse" message="tns:IService1_GetCitiesOfCountry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCitiesOfRegion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetCitiesOfRegion" message="tns:IService1_GetCitiesOfRegion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetCitiesOfRegionResponse" message="tns:IService1_GetCitiesOfRegion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSmallSellers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetSmallSellers" message="tns:IService1_GetSmallSellers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetSmallSellersResponse" message="tns:IService1_GetSmallSellers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFullSellers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetFullSellers" message="tns:IService1_GetFullSellers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetFullSellersResponse" message="tns:IService1_GetFullSellers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFittings">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetFittings" message="tns:IService1_GetFittings_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetFittingsResponse" message="tns:IService1_GetFittings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllFittings">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllFittings" message="tns:IService1_GetAllFittings_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllFittingsResponse" message="tns:IService1_GetAllFittings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddFitting">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddFitting" message="tns:IService1_AddFitting_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddFittingResponse" message="tns:IService1_AddFitting_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/AddFittingCustomExpMsgFault" name="CustomExpMsgFault" message="tns:IService1_AddFitting_CustomExpMsgFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCompany">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddCompany" message="tns:IService1_AddCompany_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddCompanyResponse" message="tns:IService1_AddCompany_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/AddCompanyCustomExpMsgFault" name="CustomExpMsgFault" message="tns:IService1_AddCompany_CustomExpMsgFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCompanyID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/FindCompanyID" message="tns:IService1_FindCompanyID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/FindCompanyIDResponse" message="tns:IService1_FindCompanyID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSellerFromExistCompany">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddSellerFromExistCompany" message="tns:IService1_AddSellerFromExistCompany_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddSellerFromExistCompanyResponse" message="tns:IService1_AddSellerFromExistCompany_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddCity" message="tns:IService1_AddCity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddCityResponse" message="tns:IService1_AddCity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCitiesAsName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetCitiesAsName" message="tns:IService1_GetCitiesAsName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetCitiesAsNameResponse" message="tns:IService1_GetCitiesAsName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCityAsName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddCityAsName" message="tns:IService1_AddCityAsName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddCityAsNameResponse" message="tns:IService1_AddCityAsName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCityToRegion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddCityToRegion" message="tns:IService1_AddCityToRegion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddCityToRegionResponse" message="tns:IService1_AddCityToRegion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCityToCountry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddCityToCountry" message="tns:IService1_AddCityToCountry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddCityToCountryResponse" message="tns:IService1_AddCityToCountry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewCity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddNewCity" message="tns:IService1_AddNewCity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddNewCityResponse" message="tns:IService1_AddNewCity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewRegion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddNewRegion" message="tns:IService1_AddNewRegion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddNewRegionResponse" message="tns:IService1_AddNewRegion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewCountry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddNewCountry" message="tns:IService1_AddNewCountry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddNewCountryResponse" message="tns:IService1_AddNewCountry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewCompany">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddNewCompany" message="tns:IService1_AddNewCompany_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddNewCompanyResponse" message="tns:IService1_AddNewCompany_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRateToRUB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetRateToRUB" message="tns:IService1_GetRateToRUB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetRateToRUBResponse" message="tns:IService1_GetRateToRUB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRateToEUR">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetRateToEUR" message="tns:IService1_GetRateToEUR_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetRateToEURResponse" message="tns:IService1_GetRateToEUR_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetRate" message="tns:IService1_GetRate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetRateResponse" message="tns:IService1_GetRate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTypeProductParametersFromCombinationID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetTypeProductParametersFromCombinationID" message="tns:IService1_GetTypeProductParametersFromCombinationID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetTypeProductParametersFromCombinationIDResponse" message="tns:IService1_GetTypeProductParametersFromCombinationID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetValueExpression">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetValueExpression" message="tns:IService1_GetValueExpression_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetValueExpressionResponse" message="tns:IService1_GetValueExpression_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCustomers">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetCustomers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyName">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetCompanyName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompany">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCompanies">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllCompanies" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonsOfCompany">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetPersonsOfCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPersonToCompany">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddPersonToCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSession">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExpMsgFault">
+        <soap:fault use="literal" name="CustomExpMsgFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CloseSession">
+      <soap:operation soapAction="http://tempuri.org/IService1/CloseSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddType">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RenameType">
+      <soap:operation soapAction="http://tempuri.org/IService1/RenameType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTypes">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelType">
+      <soap:operation soapAction="http://tempuri.org/IService1/DelType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExpMsgFault">
+        <soap:fault use="literal" name="CustomExpMsgFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTypeParameters">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetTypeParameters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetType">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetParameters">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetParameters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddParameter">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddParameter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExpMsgFault">
+        <soap:fault use="literal" name="CustomExpMsgFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RenameParameter">
+      <soap:operation soapAction="http://tempuri.org/IService1/RenameParameter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExpMsgFault">
+        <soap:fault use="literal" name="CustomExpMsgFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddTypeParameter">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddTypeParameter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCombinations">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetCombinations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCombination">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddCombination" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExpMsgFault">
+        <soap:fault use="literal" name="CustomExpMsgFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RenameCombination">
+      <soap:operation soapAction="http://tempuri.org/IService1/RenameCombination" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExpMsgFault">
+        <soap:fault use="literal" name="CustomExpMsgFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DelCombination">
+      <soap:operation soapAction="http://tempuri.org/IService1/DelCombination" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCombinationParameters">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetCombinationParameters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDims">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetDims" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCombinationFittings">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetCombinationFittings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCombinationFitting">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddCombinationFitting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCombinationFitting_1">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddCombinationFitting_1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditCombinationFitting">
+      <soap:operation soapAction="http://tempuri.org/IService1/EditCombinationFitting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelCombinationFitting">
+      <soap:operation soapAction="http://tempuri.org/IService1/DelCombinationFitting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetArticle">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetArticle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDim">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddDim" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExpMsgFault">
+        <soap:fault use="literal" name="CustomExpMsgFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RenameDim">
+      <soap:operation soapAction="http://tempuri.org/IService1/RenameDim" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExpMsgFault">
+        <soap:fault use="literal" name="CustomExpMsgFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DelDim">
+      <soap:operation soapAction="http://tempuri.org/IService1/DelDim" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExpMsgFault">
+        <soap:fault use="literal" name="CustomExpMsgFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountries">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetCountries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCountry">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddCountry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExpMsgFault">
+        <soap:fault use="literal" name="CustomExpMsgFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RenameCountry">
+      <soap:operation soapAction="http://tempuri.org/IService1/RenameCountry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExpMsgFault">
+        <soap:fault use="literal" name="CustomExpMsgFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DelCountry">
+      <soap:operation soapAction="http://tempuri.org/IService1/DelCountry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExpMsgFault">
+        <soap:fault use="literal" name="CustomExpMsgFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegions">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetRegions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCities">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetCities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRegion">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddRegion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExpMsgFault">
+        <soap:fault use="literal" name="CustomExpMsgFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RenameRegion">
+      <soap:operation soapAction="http://tempuri.org/IService1/RenameRegion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExpMsgFault">
+        <soap:fault use="literal" name="CustomExpMsgFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DelRegion">
+      <soap:operation soapAction="http://tempuri.org/IService1/DelRegion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExpMsgFault">
+        <soap:fault use="literal" name="CustomExpMsgFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCitiesOfCountry">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetCitiesOfCountry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCitiesOfRegion">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetCitiesOfRegion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSmallSellers">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetSmallSellers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFullSellers">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetFullSellers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFittings">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetFittings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllFittings">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllFittings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFitting">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddFitting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExpMsgFault">
+        <soap:fault use="literal" name="CustomExpMsgFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddCompany">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExpMsgFault">
+        <soap:fault use="literal" name="CustomExpMsgFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FindCompanyID">
+      <soap:operation soapAction="http://tempuri.org/IService1/FindCompanyID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSellerFromExistCompany">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddSellerFromExistCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCity">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddCity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCitiesAsName">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetCitiesAsName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCityAsName">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddCityAsName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCityToRegion">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddCityToRegion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCityToCountry">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddCityToCountry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewCity">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddNewCity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewRegion">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddNewRegion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewCountry">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddNewCountry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewCompany">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddNewCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRateToRUB">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetRateToRUB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRateToEUR">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetRateToEUR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRate">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetRate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTypeProductParametersFromCombinationID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetTypeProductParametersFromCombinationID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetValueExpression">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetValueExpression" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/ParametricDesignWcfServiceLibrary/Service1/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
